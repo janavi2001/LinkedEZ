@@ -1,0 +1,41 @@
+# Environment variables and API keys
+.env
+credentials.json
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Data files
+*.csv
+*.xlsx
+linkedin_outreach.csv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Results and logs
+results/
+*.html
+*.log
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
