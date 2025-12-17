@@ -86,7 +86,9 @@ class LinkedInTasker:
                 f"Use the LinkedIn search bar to search for '{company}'",
                 "Click on 'People' filter to show only people results from the company",
                 "Scroll through the search results to view available profiles",
-                f"For each of the next {num_people} people in the results:",
+                f"IMPORTANT: You need to send EXACTLY {num_people} connection requests. Keep count as you go.",
+                f"Initialize a counter starting at 0. Each time you successfully send a connection request, increment the counter by 1.",
+                f"Repeat the following process ONLY until your counter reaches {num_people}, then STOP immediately:",
                 "  - Look for the 'Connect' button on their profile card",
                 "  - If 'Connect' is visible, click it directly",
                 "  - If only 'More' (three dots) is visible, click it and select 'Connect' from dropdown",
@@ -102,10 +104,11 @@ class LinkedInTasker:
                 "  - Remove filler words: 'really', 'very', 'I think', 'I hope', etc.",
                 "  - Only click 'Send' after confirming the message is under 250 characters",
                 "  - Wait a moment for the request to be sent",
-                "  - Take note of the person's name and current job title",
-                f"Continue this process until {num_people} connection requests have been successfully sent",
+                "  - Increment your counter by 1 (you've now sent 1 more connection request)",
+                f"  - Check if counter equals {num_people}. If yes, STOP IMMEDIATELY. If no, continue to next person.",
+                f"After sending EXACTLY {num_people} connection requests, STOP the task completely. Do not send more.",
                 "Handle any LinkedIn connection limit warnings by noting them",
-                "If LinkedIn shows a warning about weekly invite limits, stop and report the number completed"
+                "If LinkedIn shows a warning about weekly invite limits, stop immediately and report the number completed"
             ]
             
             tasker.set_task(instruction, todos)
